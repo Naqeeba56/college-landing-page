@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(./univ.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav img {
+  width: 150px;
+  margin: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.nav-links {
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+.nav-links ul {
+  display: flex;
+}
+.nav-links ul li {
+  list-style: none;
+  margin: 10px;
+  position: relative;
+}
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 2px 20px;
+  border-radius: 10px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.nav-links ul li a:hover {
+  color: rgb(0, 0, 0);
+  border-radius: 12px;
+  background-color: white;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 0px 5px 3px rgb(99, 215, 248);
+}
+
+.nav-links ul li::after {
+  content: '';
+  background: rgb(255, 255, 255);
+  height: 3px;
+  width: 0%;
+  display: block;
+  margin-top: 15px;
+}
+
+.nav-links ul li:hover:after {
+  width: 100%;
+  transition-property: all;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in;
+}
+
+.text-box {
+  width: 90%;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  color: white;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.text-box h1 {
+  font-size: 70px;
+}
+.text-box p {
+  margin: 10px;
+  font-size: 18px;
+}
+
+.here-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  border: 1px solid white;
+  padding: 10px 25px;
+  margin: 20px;
+  position: relative;
+  background: transparent;
+  word-spacing: 1px;
+}
+.here-btn:hover {
+  color: black;
+  background: white;
+  transition: 0.7s;
+}
+nav .fa-solid {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .text-box h1 {
+    font-size: 30px;
+  }
+  nav img {
+    width: 150px;
+    margin: 30px 0px;
+    position: absolute;
+    left: 109px;
+  }
+
+  .nav-links {
+    position: absolute;
+    background: black;
+    color: white;
+    top: 0;
+    right: 0;
+    text-align: left;
+    width: 150px;
+    height: 100vh;
+    z-index: 2;
+    transition: 1s;
+  }
+  .nav-links ul {
+    flex-direction: column;
+  }
+  .nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 2px 20px;
+    border-radius: 10px;
+    margin: 40px 0px;
+  }
+  .nav-links ul li::after {
+    content: '';
+    display: none;
+  }
+  .nav-links ul li {
+    list-style: none;
+    margin: 20px 10px;
+    position: relative;
+  }
+  nav .fa-solid {
+    display: block;
+    margin: 10px;
+    padding: 8px;
+    cursor: pointer;
+    color: white;
+  }
+  #menu {
+    position: absolute;
+    top: 0;
+    right: 3px;
+  }
+}
+
+/* ////////////////////COURSES //////////////////////*/
+
+.course {
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  text-align: center;
+}
+.course h1 {
+  margin: 10px;
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.row {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
+}
+
+.course-col {
+  flex-basis: 1;
+  margin: 80px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.course-col h3 {
+  margin: 10px 0px;
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+.course-col p {
+  font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+}
+.course-col:hover {
+  box-shadow: 0px 0px 20px rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+  .course-col {
+    text-align: center;
+    margin: 10px;
+  }
+}
+
+/* //////////////////CAMPUS///////////////////// */
+
+.campus {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  padding: 10px 20px;
+}
+.campus h1 {
+  font-size: 50px;
+  margin-top: 20px;
+  font-family: 'Oswald', sans-serif;
+}
+.campus-col {
+  flex-basis: 30%;
+  position: relative;
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+.campus-col img {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  display: block;
+}
+
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 18px;
+  transition: 0.5s;
+}
+.layer h2 {
+  bottom: 0;
+  left: 50%;
+  position: absolute;
+  width: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 0.3s;
+}
+.layer:hover h2 {
+  visibility: visible;
+  bottom: 50%;
+  opacity: 1;
+}
+.layer:hover {
+  background-color: rgb(111, 111, 116, 0.6);
+}
+
+/* //////////Facilities ////////////////*/
+.facilities {
+  width: 80%;
+  margin: 10px auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.facilities-col {
+  flex-basis: 31%;
+  text-align: left;
+  margin-bottom: 5%;
+  position: relative;
+}
+.facilities-col img {
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.facilities-col h2 {
+  text-align: center;
+  margin-top: 5%;
+  padding: 10px 0px;
+  font-family: 'Oswald', sans-serif;
+}
+.facilities-col p {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* ////////////TESTIMONIALS/////////// */
+
+.testimonials {
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  font-family: 'Oswald', sans-serif;
+}
+.testimonials-col {
+  display: flex;
+  flex-basis: 48%;
+  border-radius: 15px;
+  text-align: right;
+  background-color: rgb(255, 185, 163);
+  cursor: pointer;
+  padding: 10px 10px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  transition: 0.6s;
+}
+
+.testimonials-col img {
+  height: 60px;
+  width: 60px;
+  margin: 20px;
+  float: left;
+  border-radius: 50px;
+  position: relative;
+}
+.testimonials-col h3 {
+  padding: 10px 20px;
+  text-align: right;
+  font-family: 'Oswald', sans-serif;
+}
+.testimonials-col p {
+  font-size: 15px;
+  padding-right: 5px;
+  padding-top: 10px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.star-rating {
+  display: flex;
+  float: right;
+  margin: 0px 50px;
+}
+.testimonials-col:hover {
+  transform: scale(1.1);
+  background-color: bisque;
+}
+
+
+/* ---------------Call to action------------- */
+
+.cta {
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(./img/contact.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 100px auto;
+  width: 80%;
+  text-align: center;
+  padding:100px 0px;
+  background-position: center;
+  border-radius: 15px;
+  
+}
+
+.cta h1{
+  color:white;
+  font-size: 30px;
+  font-family: 'Oswald', sans-serif;
+  font-weight:400;
+  margin-bottom: 20px;
+}
+
+@media (max-width:700px) {
+  .cta h1 {
+    font-size: 20px;
+  }
+}
+
+.footer {
+  text-align: center;
+  
+}
+
+.foot-icons {
+  padding: 20px 0px;
+  margin: 10px;
+}
+.fa-facebook
+{
+  font-size: 40px;
+  padding: 0px 10px;
+  color: rgb(9, 49, 65);
+}
+
+.fa-twitter
+{
+  font-size: 40px;
+  padding: 0px 10px;
+  color: rgb(107, 205, 243);
+}
+.fa-instagram
+{
+  font-size: 40px;
+  padding: 0px 10px;
+  color: rgb(228, 35, 35);
+}
+.fa-linkedin
+{
+  font-size: 40px;
+  padding: 0px 10px;
+  color: rgb(5, 32, 51);
+
+}
+.footer h4 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+
+}
+
+.last-line {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  margin-bottom: 400px;
+
+}
+.fa-heart {
+  color: rgb(255, 1, 1);
+}
